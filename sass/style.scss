@@ -30,7 +30,7 @@ body {
     line-height: 1.7;
     font-family: $primary-font;
 }
-section {
+section, footer {
 	padding: 50px 0;
 	.container {
 		@media (min-width: 1200px) {
@@ -70,6 +70,19 @@ section {
 		min-height: 100px;
 		position: relative;
 		width: 100%;
+		@media (max-width: 900px) {
+			text-align: center;
+		}
+		.menu-off {
+			@media (max-width: 900px) {
+				display: none;
+			}
+		}
+		.menu-on {
+			@media (max-width: 900px) {
+				display: block;
+			}
+		}
 		.navbar-brand {
 			position: absolute;
 			left: 0;
@@ -79,21 +92,47 @@ section {
 			text-decoration: none;
 			font-size: 50px;
 			text-align: left;
+			@media (max-width: 900px) {
+				position: none;
+			}
 		}
-		.navbar-toggler {
+		#navbar-toggler {
+			@media (max-width: 900px) {
+				display: block;
+				position: absolute;
+				right: 30px;
+				top: 30px;
+			}
 			display: none;
+			i {
+				color: white;
+				font-size: 30px;
+			}
 		}
 		ul {
 			padding-top: 30px;
 			text-align: right;
 			list-style-type: none;
 			margin: 0;
+			@media (max-width: 900px) {
+				display: block;
+				padding-top: 80px;
+				text-align: center;
+				margin: 0 auto;
+				padding: 80px 0 0 0;
+			}
 			li {
+				@media (max-width: 900px) {
+					display: block;
+					text-align: center;
+					margin: 0;
+					padding: 0;
+				}
 				display: inline-block;
 				margin: 5px 10px;
 				a {
 					text-decoration: none;
-					font-weight: 400;
+					font-weight: 500;
 					color: white;
 					text-transform: uppercase;
 					font-size: 15px;
@@ -125,6 +164,9 @@ section {
 			color: white;
 			text-align: center;
 			text-transform: uppercase;
+			@media (max-width: 900px) {
+				font-size: 28px;
+			}
 		}
 		h2 {
 			margin: 0;
@@ -134,6 +176,9 @@ section {
 			font-weight: 400;
 			color: white;
 			text-align: center;
+			@media (max-width: 900px) {
+				font-size: 20px;
+			}
 		}
 	}
 }
@@ -219,5 +264,37 @@ section {
 			color: $secondary-color;
 			padding-bottom: 15px;;
 		}
+	}
+}
+footer {
+	padding: 30px 0;
+	.social {
+		list-style-type: none;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			margin: 5px;
+			a {
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				display: block;
+				text-align: center;
+				background: black;
+				&:hover {
+					background: $primary-color;
+				}
+				i {
+					color: white;
+				}
+			}
+		}
+	}
+	p {
+		
+		text-align: center;
 	}
 }

@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Kurs</title>
+      <title>VokalTeam</title>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 	  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,400i,600,700,800&display=swap&subset=latin-ext" rel="stylesheet">
 	  <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
@@ -14,11 +14,9 @@
     <nav class="navigation">
         <div class="container">
 			<div class="nav-inner">
-				<a href="" class="navbar-brand">Logo</a>
-				<button class="navbar-toggler" type="button" >
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<ul>
+				<a href="#" class="navbar-brand">VokalTeam</a>
+				<a href="#" id="navbar-toggler"><i class="fas fa-bars"></i></a>
+				<ul id="menu" class="menu-off">
 					<li><a href="#" class="nav-link">Home</a></li>
 					<li><a href="#" class="nav-link">Services</a></li>
 					<li><a href="#" class="nav-link">Portfolio</a></li>
@@ -120,11 +118,41 @@
 			</div>
 		</section>
 	</section>
- 
-  
     <footer>
-     
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-4">
+					<p>&copy; Copyright by VokalTeam</p>
+				</div>
+				<div class="col-12 col-md-4">
+					<ul class="social">
+						<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+						<li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-md-4">
+					&nbsp;
+				</div>
+			</div>
+		</div>
     </footer>
-
+	<script>			
+		function buttonClicked(){
+			let btn = document.querySelector('#menu');
+			let btnClass = btn.getAttribute('class');
+			if(btnClass == 'menu-off') {
+				btn.classList.remove('menu-off');
+				btn.classList.add('menu-on');
+			}
+			else {
+				btn.classList.remove('menu-on');
+				btn.classList.add('menu-off');
+			}
+		}
+		const clickButton = document.getElementById('navbar-toggler');
+		clickButton.addEventListener('click', buttonClicked);
+	</script>
 </body>
 </html>
