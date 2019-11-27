@@ -1,0 +1,138 @@
+/* Variables */
+/* mixin */
+/* Global */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* navigation */
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation .nav-inner {
+  min-height: 100px;
+  position: relative;
+  width: 100%;
+}
+
+.navigation .nav-inner .navbar-brand {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: "Indie Flower", cursive;
+  color: #fed136;
+  text-decoration: none;
+  font-size: 50px;
+  text-align: left;
+}
+
+.navigation .nav-inner .navbar-toggler {
+  display: none;
+}
+
+.navigation .nav-inner ul {
+  padding-top: 30px;
+  text-align: right;
+  list-style-type: none;
+  margin: 0;
+}
+
+.navigation .nav-inner ul li {
+  display: inline-block;
+  margin: 5px 10px;
+}
+
+.navigation .nav-inner ul li a {
+  text-decoration: none;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.navigation .nav-inner ul li a:hover {
+  color: #fed136;
+}
+
+/* header */
+.splash {
+  background: url("../images/intro.jpg") 50% top no-repeat;
+  background-size: cover;
+  min-height: 700px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.splash .splash-inner {
+  text-align: center;
+}
+
+.splash .splash-inner h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 72px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.splash .splash-inner h2 {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  font-size: 36px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 160px;
+  margin: 24px auto 0 auto;
+  padding: 16px;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+  background-position: 100% 0 !important;
+  background-size: 300% !important;
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  background-position: 0 100% !important;
+}
+
+.btn-splash {
+  border-color: #fed136;
+  background-image: linear-gradient(90deg, #fed136 50%, transparent 50%);
+  color: #fed136;
+}
+
+.btn-splash:hover {
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

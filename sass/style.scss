@@ -1,0 +1,135 @@
+/* Variables */
+
+$primary-color: #fed136;
+$secondary-color: #777777;
+$font-color: #333333;
+$secondary-font: 'Indie Flower', cursive;
+$primary-font: 'Montserrat', sans-serif;
+
+/* mixin */
+
+@mixin cta($border-color, $bg-color, $hover-color) {
+    border-color: $border-color;
+    background-image: linear-gradient(90deg, $bg-color 50%, transparent 50%);
+    color: $bg-color;
+    &:hover {
+        color: $hover-color;   
+    }
+}
+
+/* Global */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fff;
+    color: $font-color;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: $primary-font;
+}
+
+/* navigation */
+
+.navigation {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	.nav-inner {
+		min-height: 100px;
+		position: relative;
+		width: 100%;
+		.navbar-brand {
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-family: $secondary-font;
+			color: $primary-color;
+			text-decoration: none;
+			font-size: 50px;
+			text-align: left;
+		}
+		.navbar-toggler {
+			display: none;
+		}
+		ul {
+			padding-top: 30px;
+			text-align: right;
+			list-style-type: none;
+			margin: 0;
+			li {
+				display: inline-block;
+				margin: 5px 10px;
+				a {
+					text-decoration: none;
+					font-weight: 400;
+					color: white;
+					text-transform: uppercase;
+					font-size: 15px;
+					&:hover {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* header */
+
+.splash {
+	background: url('../images/intro.jpg') 50% top no-repeat;
+	background-size: cover;
+    min-height: 700px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.splash-inner {
+		text-align: center;
+		h1 {
+			margin: 0;
+			padding: 0;
+			font-size: 72px;
+			font-weight: 600;
+			color: white;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		h2 {
+			margin: 0;
+			padding: 0;
+			font-style: italic;
+			font-size: 36px;
+			font-weight: 400;
+			color: white;
+			text-align: center;
+		}
+	}
+}
+.btn {
+    display: inline-block;
+    min-width: 160px;
+    margin: 24px auto 0 auto;
+    padding: 16px;
+    border-radius: 5px;
+    font-family: $primary-font;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    background-position: 100% 0 !important;
+    background-size: 300% !important;
+    transition: all 0.4s;
+    &:hover {
+        background-position: 0 100% !important;
+    }
+}
+.btn-splash {
+    @include cta($primary-color, $primary-color, #fff);
+}
