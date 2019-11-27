@@ -8,10 +8,35 @@
 body {
   margin: 0;
   background: #fff;
-  color: #333333;
+  color: #000000;
   font-size: 16px;
   line-height: 1.7;
   font-family: "Montserrat", sans-serif;
+}
+
+section {
+  padding: 50px 0;
+}
+
+.section-title {
+  margin: 30px 0;
+}
+
+.section-title h2 {
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 38px;
+  margin: 0;
+  font-weight: 800;
+}
+
+.section-title p {
+  text-align: center;
+  color: #777777;
+  margin: 0;
+  font-style: italic;
+  font-weight: 400;
 }
 
 /* navigation */
@@ -20,6 +45,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .navigation .nav-inner {
@@ -134,5 +160,33 @@ body {
 
 .btn-splash:hover {
   color: #fff;
+}
+
+.services .services-box {
+  text-align: center;
+}
+
+.services .services-box i {
+  display: inline-block;
+  width: 85px;
+  height: 85px;
+  color: #fed136;
+  font-size: 44px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 15px;
+  border: 2px solid #fed136;
+  margin: 10px;
+}
+
+.services .services-box h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.services .services-box p {
+  text-align: center;
+  color: #777777;
 }
 /*# sourceMappingURL=style.css.map */
